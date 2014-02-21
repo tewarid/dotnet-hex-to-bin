@@ -1,8 +1,8 @@
+using HexToBinLib;
 using System;
 using System.Text;
-using de.log.HexToBinLib;
 
-namespace de.log.HexToBinTool
+namespace HexToBinTool
 {
 	class MainClass
 	{
