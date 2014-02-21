@@ -1,9 +1,9 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 using System.IO;
-using de.log.HexToBinLib;
+using HexToBinLib;
 
-namespace de.log.HexToBinTest
+namespace HexToBinTest
 {
 	[TestClass()]
 	public class Test

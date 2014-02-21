@@ -7,7 +7,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{A64D7924-1353-40C8-ABAA-563A2876B268}</ProjectGuid>
     <OutputType>Library</OutputType>
-    <RootNamespace>de.log.HexToBinTest</RootNamespace>
+    <RootNamespace>HexToBinTest</RootNamespace>
     <AssemblyName>HexToBinTest</AssemblyName>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
