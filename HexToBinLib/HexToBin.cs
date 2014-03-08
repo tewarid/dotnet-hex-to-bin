@@ -7,6 +7,26 @@ namespace HexToBinLib
 {
     public class HexToBin
     {
+        static string ignoredChars = string.Empty;
+
+        /// <summary>
+        /// Specifies a string containing characters that will be ignored
+        /// in the supplied hex input. This may be useful to ignore characters
+        /// such as {}' that are commonly found in a C array initialization
+        /// e.g. {0xDE, 0xAD}.
+        /// </summary>
+        public static string IgnoredChars
+        {
+            get
+            {
+                return ignoredChars;
+            }
+            set
+            {
+                ignoredChars = value;
+            }
+        }
+
         /// <summary>
         /// Read hex stream from input file and write corresponding binary to output file.
         /// </summary>
@@ -62,27 +82,28 @@ namespace HexToBinLib
                         {
                             parse = true;
                         }
-                        break;
+                        break; // switch
 
                     case ' ':
                         if (!has0x && val.Length == 2)
                         {
                             parse = true;
                         }
-                        break;
+                        break; // switch
 
                     case -1:
                         if (val.Length > 0)
                         {
                             parse = true;
                         }
-                        break;
+                        break; // switch
 
                     default:
                         if (colStart == 0)
                         {
                             colStart = col;
                         }
+                        
                         if (ch == '0')
                         {
                             // strip off 0x
@@ -98,15 +119,20 @@ namespace HexToBinLib
                                 // skip
                                 input.Read();
                                 col++;
-                                break;
+                                break; // switch
                             }
                         }
+                        else if(IgnoredChar(ch))
+                        {
+                            break; // switch
+                        }
+
                         val.Append((char)ch);
                         if (!has0x && val.Length == 2)
                         {
                             parse = true;
                         }
-                        break;
+                        break; // switch
                 }
 
                 if (parse)
@@ -131,12 +157,30 @@ namespace HexToBinLib
 
                 if (ch == -1)
                 {
-                    break;
+                    break; // while
                 }
 
                 col++;
             }
             return count;
+        }
+
+        /// <summary>
+        /// Determines whether a character will be ignored.
+        /// </summary>
+        /// <param name="ch">Character to test</param>
+        /// <returns>true if character is ignored</returns>
+        /// <see cref="IgnoredChars"/>
+        public static bool IgnoredChar(int ch)
+        {
+            for (int i = 0; i < ignoredChars.Length; i++)
+            {
+                if (ignoredChars[i] == ch)
+                {
+                    return true;
+                }
+            }
+            return false;
         }
     }
 }
