@@ -14,6 +14,8 @@ namespace HexToBinTool
             if (!ParseOptions(args))
             {
                 PrintUsage();
+                Console.WriteLine("Press Enter to quit...");
+                Console.Read();
                 Environment.Exit(-1);
             }
 
@@ -27,6 +29,8 @@ namespace HexToBinTool
                 Console.WriteLine(e.Message);
                 Console.WriteLine(e.StackTrace);
             }
+            Console.WriteLine("Press Enter to quit...");
+            Console.Read();
         }
 
         static bool ParseOptions(string[] args)

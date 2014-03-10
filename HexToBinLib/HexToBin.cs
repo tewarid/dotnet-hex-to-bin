@@ -85,6 +85,7 @@ namespace HexToBinLib
                         break; // switch
 
                     case ' ':
+                    case '\t':
                         if (!has0x && val.Length == 2)
                         {
                             parse = true;
