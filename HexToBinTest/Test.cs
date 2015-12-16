@@ -159,5 +159,13 @@ namespace HexToBinTest
             Assert.AreNotEqual(-1, count);
             CollectionAssert.AreEqual(new byte[] { 0xDE, 0XAD }, output.GetBuffer());
         }
+
+        [TestMethod()]
+        public void TestCase18()
+        {
+            MemoryStream output = new MemoryStream(2);
+            int count = HexToBin.Convert(new StringReader("0xDEAD"), output);
+            Assert.AreEqual(-1, count);
+        }
     }
 }
