@@ -78,7 +78,7 @@ namespace HexToBinLib
                             // just so we don't count the same line twice for dos/windows
                             input.Read();
                         }
-                        if (!has0x && val.Length == 2)
+                        if (val.Length == 2)
                         {
                             parse = true;
                         }
@@ -86,7 +86,7 @@ namespace HexToBinLib
 
                     case ' ':
                     case '\t':
-                        if (!has0x && val.Length == 2)
+                        if (val.Length == 2)
                         {
                             parse = true;
                         }
@@ -154,6 +154,7 @@ namespace HexToBinLib
                     val.Clear();
                     colStart = 0;
                     parse = false;
+                    has0x = false;
                 }
 
                 if (ch == -1)

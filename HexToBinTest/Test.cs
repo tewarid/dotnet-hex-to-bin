@@ -31,17 +31,17 @@ namespace HexToBinTest
         {
             MemoryStream output = new MemoryStream(2);
             int count = HexToBin.Convert(new StringReader("0xD E0xAD"), output);
-            Assert.AreNotEqual(-1, count);
-            CollectionAssert.AreEqual(new byte[] { 0xDE, 0XAD }, output.GetBuffer());
+            Assert.AreEqual(2, count);
+            CollectionAssert.AreEqual(new byte[] { 0xDE, 0xAD }, output.GetBuffer());
         }
 
         [TestMethod()]
         public void TestCase04()
         {
-            MemoryStream output = new MemoryStream(2);
-            int count = HexToBin.Convert(new StringReader("0xD E0xAD"), output);
-            Assert.AreNotEqual(-1, count);
-            CollectionAssert.AreEqual(new byte[] { 0xDE, 0XAD }, output.GetBuffer());
+            MemoryStream output = new MemoryStream(3);
+            int count = HexToBin.Convert(new StringReader("ab 0xCD EF"), output);
+            Assert.AreEqual(3, count);
+            CollectionAssert.AreEqual(new byte[] { 0xAB, 0XCD, 0xEF }, output.GetBuffer());
         }
 
         [TestMethod()]
@@ -85,7 +85,7 @@ namespace HexToBinTest
         {
             MemoryStream output = new MemoryStream(2);
             int count = HexToBin.Convert(new StringReader("0xD\r\nE 0xAD"), output);
-            Assert.AreNotEqual(-1, count);
+            Assert.AreEqual(2, count);
             CollectionAssert.AreEqual(new byte[] { 0xDE, 0XAD }, output.GetBuffer());
         }
 
@@ -112,8 +112,8 @@ namespace HexToBinTest
         {
             MemoryStream output = new MemoryStream(2);
             int count = HexToBin.Convert(new StringReader("DEA D"), output);
-            Assert.AreNotEqual(-1, count);
-            CollectionAssert.AreEqual(new byte[] { 0xDE, 0XAD }, output.GetBuffer());
+            Assert.AreEqual(2, count);
+            CollectionAssert.AreEqual(new byte[] { 0xDE, 0xAD }, output.GetBuffer());
         }
 
         [TestMethod()]
@@ -121,8 +121,8 @@ namespace HexToBinTest
         {
             MemoryStream output = new MemoryStream(2);
             int count = HexToBin.Convert(new StringReader("DEA\r\nD"), output);
-            Assert.AreNotEqual(-1, count);
-            CollectionAssert.AreEqual(new byte[] { 0xDE, 0XAD }, output.GetBuffer());
+            Assert.AreEqual(2, count);
+            CollectionAssert.AreEqual(new byte[] { 0xDE, 0xAD}, output.GetBuffer());
         }
 
         [TestMethod()]
