@@ -1,4 +1,4 @@
-# Hexadecimal ASCII To binary conversion library and tool [![Build status](https://ci.appveyor.com/api/projects/status/m9tluu3xsqwtjbu3?svg=true)](https://ci.appveyor.com/project/tewarid/net-hex-to-bin)
+# Hexadecimal ASCII to binary conversion library and tool [![Build status](https://ci.appveyor.com/api/projects/status/m9tluu3xsqwtjbu3?svg=true)](https://ci.appveyor.com/project/tewarid/net-hex-to-bin)
 
 A simple library and tool to convert a file or data in hex format (e.g. DE AD or 0xDE 0xAD or DEAD) to binary.
 
