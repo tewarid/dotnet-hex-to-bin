@@ -7,24 +7,40 @@ namespace HexToBinLib
 {
     public class HexToBin
     {
-        static string ignoredChars = string.Empty;
-
         /// <summary>
         /// Specifies a string containing characters that will be ignored
         /// in the supplied hex input. This may be useful to ignore characters
         /// such as {}' that are commonly found in a C array initialization
         /// e.g. {0xDE, 0xAD}.
         /// </summary>
-        public static string IgnoredChars
+        public string IgnoredChars { get; private set; }
+
+        /// <summary>
+        /// An instance of HexToBin with an empty IgnoredChars.
+        /// </summary>
+        public static HexToBin DefaultInstance
         {
-            get
-            {
-                return ignoredChars;
-            }
-            set
-            {
-                ignoredChars = value;
-            }
+            get;
+            private set;
+        } = new HexToBin(string.Empty);
+
+        /// <summary>
+        /// An instance of HexToBin that ignores characters found in C style 
+        /// array initialization.
+        /// </summary>
+        public static HexToBin CArrayInstance
+        {
+            get;
+            private set;
+        } = new HexToBin("{},");
+
+        /// <summary>
+        /// Creates a new instance of hex to binary converter.
+        /// </summary>
+        /// <param name="ignoredChars"><see cref="IgnoredChars"/></param>
+        public HexToBin(string ignoredChars)
+        {
+            IgnoredChars = ignoredChars;
         }
 
         /// <summary>
@@ -34,7 +50,7 @@ namespace HexToBinLib
         /// <param name="outfile">Output file name</param>
         /// <param name="encoding">Characetr encoding of data in input file.</param>
         /// <returns>Number of bytes written or a negative value on error.</returns>
-        public static int Convert(string infile, string outfile, Encoding encoding)
+        public int Convert(string infile, string outfile, Encoding encoding)
         {
             StreamReader inf = new StreamReader(File.OpenRead(infile), encoding);
             FileStream outf = File.OpenWrite(outfile);
@@ -54,7 +70,7 @@ namespace HexToBinLib
         /// <param name="input">Input text reader from where characters are read.</param>
         /// <param name="output">Output stream to where binary data is written.</param>
         /// <returns>Number of bytes written or a negative value on error.</returns>
-        public static int Convert(TextReader input, Stream output)
+        public int Convert(TextReader input, Stream output)
         {
             int line = 1;
             int col = 1;
@@ -123,7 +139,7 @@ namespace HexToBinLib
                                 break; // switch
                             }
                         }
-                        else if(IgnoredChar(ch))
+                        else if(IsIgnoredChar((char)ch))
                         {
                             break; // switch
                         }
@@ -173,11 +189,11 @@ namespace HexToBinLib
         /// <param name="ch">Character to test</param>
         /// <returns>true if character is ignored</returns>
         /// <see cref="IgnoredChars"/>
-        public static bool IgnoredChar(int ch)
+        public bool IsIgnoredChar(char ch)
         {
-            for (int i = 0; i < ignoredChars.Length; i++)
+            for (int i = 0; i < IgnoredChars.Length; i++)
             {
-                if (ignoredChars[i] == ch)
+                if (IgnoredChars[i] == ch)
                 {
                     return true;
                 }
