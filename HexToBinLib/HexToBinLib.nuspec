@@ -11,6 +11,6 @@
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>A simple library and tool to convert a file or data in hex format (e.g. DE AD or 0xDE 0xAD or DEAD) to binary.</description>
     <releaseNotes>Publish library to NuGet.</releaseNotes>
-    <copyright>Copyright 2014-2016</copyright>
+    <copyright>Copyright 2014-2018</copyright>
   </metadata>
 </package>
