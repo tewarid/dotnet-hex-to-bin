@@ -1,11 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Express 2013 for Windows Desktop
-VisualStudioVersion = 12.0.30110.0
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30204.135
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HexToBinTest", "HexToBinTest\HexToBinTest.csproj", "{A64D7924-1353-40C8-ABAA-563A2876B268}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HexToBinLib", "HexToBinLib\HexToBinLib.csproj", "{78E37AB9-1A85-4E08-8F72-FA3BC098A4AF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HexToBinLib", "HexToBinLib\HexToBinLib.csproj", "{78E37AB9-1A85-4E08-8F72-FA3BC098A4AF}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HexToBinTool", "HexToBinTool\HexToBinTool.csproj", "{9C9EC136-C08D-4882-818D-9F052F6BEFCB}"
 EndProject
@@ -45,6 +45,9 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6C9E45AD-1709-425F-8431-D5B0DEB57CBD}
 	EndGlobalSection
 	GlobalSection(MonoDevelopProperties) = preSolution
 		StartupItem = HexToBin\HexToBin.csproj
