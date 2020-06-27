@@ -9,6 +9,8 @@ assembly_info:
   file: AssemblyInfo.cs
   assembly_version: '{version}'
   assembly_file_version: '{version}'
+before_build:
+  - nuget restore HexToBin.sln
 build:
   project: HexToBin.sln
   publish_nuget: true
