@@ -7,7 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HexToBinTest.NetCore", "Hex
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HexToBinTool.NetCore", "HexToBinTool\HexToBinTool.NetCore.csproj", "{1882FFE3-D4C1-4D96-AE98-E312F1793802}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HexToBinLib.NetCore", "HexToBinLib\HexToBinLib.NetCore.csproj", "{EDE0AEA7-CD8B-4DE0-839E-3EF4E0F49815}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HexToBinLib", "HexToBinLib\HexToBinLib.csproj", "{3DF411A9-7565-484C-9CFE-1627D7158024}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -43,18 +43,18 @@ Global
 		{1882FFE3-D4C1-4D96-AE98-E312F1793802}.Release|x64.Build.0 = Release|Any CPU
 		{1882FFE3-D4C1-4D96-AE98-E312F1793802}.Release|x86.ActiveCfg = Release|Any CPU
 		{1882FFE3-D4C1-4D96-AE98-E312F1793802}.Release|x86.Build.0 = Release|Any CPU
-		{EDE0AEA7-CD8B-4DE0-839E-3EF4E0F49815}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{EDE0AEA7-CD8B-4DE0-839E-3EF4E0F49815}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{EDE0AEA7-CD8B-4DE0-839E-3EF4E0F49815}.Debug|x64.ActiveCfg = Debug|Any CPU
-		{EDE0AEA7-CD8B-4DE0-839E-3EF4E0F49815}.Debug|x64.Build.0 = Debug|Any CPU
-		{EDE0AEA7-CD8B-4DE0-839E-3EF4E0F49815}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{EDE0AEA7-CD8B-4DE0-839E-3EF4E0F49815}.Debug|x86.Build.0 = Debug|Any CPU
-		{EDE0AEA7-CD8B-4DE0-839E-3EF4E0F49815}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{EDE0AEA7-CD8B-4DE0-839E-3EF4E0F49815}.Release|Any CPU.Build.0 = Release|Any CPU
-		{EDE0AEA7-CD8B-4DE0-839E-3EF4E0F49815}.Release|x64.ActiveCfg = Release|Any CPU
-		{EDE0AEA7-CD8B-4DE0-839E-3EF4E0F49815}.Release|x64.Build.0 = Release|Any CPU
-		{EDE0AEA7-CD8B-4DE0-839E-3EF4E0F49815}.Release|x86.ActiveCfg = Release|Any CPU
-		{EDE0AEA7-CD8B-4DE0-839E-3EF4E0F49815}.Release|x86.Build.0 = Release|Any CPU
+		{3DF411A9-7565-484C-9CFE-1627D7158024}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3DF411A9-7565-484C-9CFE-1627D7158024}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3DF411A9-7565-484C-9CFE-1627D7158024}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{3DF411A9-7565-484C-9CFE-1627D7158024}.Debug|x64.Build.0 = Debug|Any CPU
+		{3DF411A9-7565-484C-9CFE-1627D7158024}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{3DF411A9-7565-484C-9CFE-1627D7158024}.Debug|x86.Build.0 = Debug|Any CPU
+		{3DF411A9-7565-484C-9CFE-1627D7158024}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3DF411A9-7565-484C-9CFE-1627D7158024}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3DF411A9-7565-484C-9CFE-1627D7158024}.Release|x64.ActiveCfg = Release|Any CPU
+		{3DF411A9-7565-484C-9CFE-1627D7158024}.Release|x64.Build.0 = Release|Any CPU
+		{3DF411A9-7565-484C-9CFE-1627D7158024}.Release|x86.ActiveCfg = Release|Any CPU
+		{3DF411A9-7565-484C-9CFE-1627D7158024}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

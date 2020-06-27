@@ -16,7 +16,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\HexToBinLib\HexToBinLib.NetCore.csproj" />
+    <ProjectReference Include="..\HexToBinLib\HexToBinLib.csproj" />
   </ItemGroup>
 
 
