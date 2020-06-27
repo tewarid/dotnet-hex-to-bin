@@ -14,7 +14,7 @@
     <PackageId>HexToBin</PackageId>
     <Authors>Devendra Tewari</Authors>
     <Description>A simple library and tool to convert a file or data in hex format (e.g. DE AD or 0xDE 0xAD or DEAD) to binary.</Description>
-    <Version>1.1.35</Version>
+    <PackageVersion>1.1.35</PackageVersion>
     <Copyright>Copyright 2020 © Devendra Tewari</Copyright>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <RepositoryUrl>https://github.com/tewarid/net-hex-to-bin</RepositoryUrl>
